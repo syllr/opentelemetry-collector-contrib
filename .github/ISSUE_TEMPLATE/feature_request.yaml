@@ -65,6 +65,7 @@ body:
       - exporter/sumologic
       - exporter/tanzuobservability
       - exporter/tencentcloudlogservice
+      - exporter/volcenginetlsexporter
       - exporter/zipkin
       - extension/asapauth
       - extension/awsproxy

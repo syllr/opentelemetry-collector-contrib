@@ -1,0 +1,18 @@
+exporters:
+  alibabacloud_logservice:
+    # TLS Endpoint, https://www.volcengine.com/docs/6470/73641
+    endpoint: "https://tls-{Region}.ivolces.com"
+    # TLS topic id
+    topic_id: "topic-id"
+    # Volcengine access key
+    access_key: "access-key"
+    # Volcengine secret key
+    secret_key: "secret-key"
+    # Volcengine region
+    region: "region"
+
+service:
+  pipelines:
+    traces:
+      receivers: [ otlp ]                           #receive otlp data
+      exporters: [ volcenginetlsexporter/traces ]   #export to volcengine tls
